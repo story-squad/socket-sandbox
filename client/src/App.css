@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(150px, 25%) 1fr;
+}
+
+.li-message {
+  color: #eeeeee;
+}
+
+.left-side {
+  background-color: #222831;
+  height: 100vh;
+}
+.rooms {
+  color: #ffd369;
+  text-align: left;
+}
+
+.li-room {
+  list-style-type: none;
+  cursor: pointer;
+  margin: .5ch;
+}
+
+.chat-input {
+  width: 90%;
+  padding: 1ch;
+  text-align: left;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.chat {
+  background-color: #393e46;
+  height: 100%;
+}
+
+.ul-chat {
+  margin: 0;
+  padding: 2ch;
+  height: 55ch;
+
+}
+
+/* Large rounded green border */
+hr.fat-10 {
+  border: 10px solid #222831;
+  border-radius: 5px;
+  margin: 1ch;
+}

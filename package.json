@@ -1,0 +1,43 @@
+{
+  "name": "socket-sandbox",
+  "version": "1.0.0",
+  "private": true,
+  "description": "typescript node express socketio",
+  "engines": {
+    "node": "12.20.1",
+    "npm": "6.14.10"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc && npm run prep",
+    "start": "node dist/index.js",
+    "prep": "cd client && REACT_APP_USERNAME=server yarn build && cp -r build ../dist/public",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && REACT_APP_USERNAME=client yarn start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.31",
+    "@types/node-cron": "^2.0.3",
+    "@types/socket.io": "^2.1.13",
+    "@types/uuid": "^8.3.0",
+    "dotenv": "^8.2.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.1.5"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "helmet-csp": "^3.3.1",
+    "node-cron": "^2.0.3",
+    "serve-static": "^1.14.1",
+    "socket.io": "^3.1.1",
+    "uuid": "^8.3.2"
+  }
+}
