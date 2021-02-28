@@ -70,6 +70,7 @@ io.on("connection", (socket) => {
     if (await socketHandler.screenMessage(io, socket, space, room, message)) {
       socketHandler.handleMessageRoom(io, socket, space, room, message);
     }
+    // console.log(space);
   });
 
   socket.on("disconnecting", () => {
