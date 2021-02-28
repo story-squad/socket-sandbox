@@ -20,7 +20,7 @@ router.post("/start/", (req, res) => {
       username,
       owner: id,
       created,
-      id: v4,
+      id,
     }
   });
 });

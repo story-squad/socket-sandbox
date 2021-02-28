@@ -13,11 +13,7 @@ export async function handleJoin(
   console.log(`${username} joins ${surfaceID}`);
   if (!space[surfaceID]) {
     // create a room if it does not exist
-    space[surfaceID] = { id: surfaceID, buffer: [] };
-  }
-  if (!space[surfaceID].connected) {
-    // if room is empty, create a connection array
-    space[surfaceID].connected = [];
+    space[surfaceID] = { id: surfaceID, buffer: [], connected: [] };
   }
   socket.join(surfaceID);
   space[surfaceID] = {

@@ -6,7 +6,7 @@ async function handleStart(io: any, socket: any, space: any, username: string) {
   try {
     const { data } = await localAxios.post("/api/example/start/", payload);
     const { surface } = data;
-    space.stars[socket.id] = surface.owner;
+    space.stars[socket.id] = surface.id;
     space[surface.owner] = surface;
     output.message = data;
   } catch (err) {
