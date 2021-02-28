@@ -17,6 +17,7 @@ function App() {
   const [text, setText] = useState("");
   const [roomId, setRoomId] = useState("#general");
   const [rooms, setRooms] = useState([]);
+  const [users, setUsers] = useState([]);
   const [username, setUsername] = useState(
     process.env.REACT_APP_USERNAME || "React-user"
   );
@@ -49,7 +50,8 @@ function App() {
       }
       socket.emit(cmd, args);
     });
-    socket.on("rooms", (roomsList: any) => setRooms(roomsList));
+    socket.on("/users", (userList: any)=> setUsers(userList))
+    socket.on("/rooms", (roomsList: any) => setRooms(roomsList));
   }, []); //eslint-disable-line
   const handleUpdateText = (e: any) => {
     e.preventDefault();

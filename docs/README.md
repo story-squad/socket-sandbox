@@ -1,3 +1,5 @@
+socket-sandbox / [Exports](modules.md)
+
 # socket-sandbox
 
 .env
@@ -30,6 +32,4 @@ start
 npm start
 ```
 
-#
-
-socket-sandbox / [Exports](docs/modules.md)
+see the [docs](docs/modules.md) for more detail
